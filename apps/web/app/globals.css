@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f5f0;
+  --foreground: #101828;
+  --panel: rgba(255, 255, 255, 0.78);
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.14), transparent 28%),
+    var(--background);
+}
+
+body {
+  color: var(--foreground);
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.86)),
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.08) 1px, transparent 0);
+  background-size: auto, 22px 22px;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-3xl border border-white/50 bg-white/70 shadow-panel backdrop-blur;
+  }
+
+  .page-shell {
+    @apply mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-dark via-brand to-coral bg-clip-text text-transparent;
+  }
+}

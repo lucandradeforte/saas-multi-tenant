@@ -1,0 +1,14 @@
+node_modules
+.next
+dist
+coverage
+.env
+.env.local
+.DS_Store
+apps/web/.next
+apps/web/node_modules
+apps/api/node_modules
+apps/api/dist
+apps/reporting-service/src/**/bin
+apps/reporting-service/src/**/obj
+postgres-data
